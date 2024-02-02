@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT, RESET } from "./Constant"
+import { ADD_USER, DECREMENT, INCREMENT, REMOVE_USER, RESET } from "./Constant"
 
 export const incrementCounter=()=>{
     return{
@@ -13,5 +13,18 @@ export const decrementCounter=()=>{
 export const resetCounter=()=>{
     return{
         type:RESET,
+    }
+}
+export const addUser=(item)=>{
+      return{
+          type:ADD_USER,
+          payload:item
+      }
+
+}
+export const removeUser=(id)=>{
+    return{
+        type:REMOVE_USER,
+        payload:id,
     }
 }
